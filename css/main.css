@@ -1,4 +1,4 @@
-/* @import url('reset_styles.css'); */
+@import url('reset_styles.css');
 
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
@@ -9,6 +9,7 @@
     --sec-bg-color: #e4ffdd;
     
     --main-accent-color: #ff8e4d;
+    --sec-accent-color: #ffbc3f;
 
     --main-text-color: #336363;
     --sec-text-color: #73BFA1;
@@ -39,18 +40,23 @@ h2, h3 {
     color: var(--main-accent-color);
 }
 
+h3 {
+    margin-top: 0.6em;
+}
+
 header {
     /* width: 100%; */
+    max-width: 100%;
     height: 80vh;
     
     display: flex;
     flex-direction: column;
 
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around;    
     text-align: center;
 
-    overflow: scroll;
+    overflow: hidden;
     background-image: url("../images/header_bg.png");
     background-size: cover;
     background-position: center 0px;
@@ -61,15 +67,25 @@ header {
 
 #header-brand {
     display: flex;
+    flex-wrap: wrap;
 
     justify-content: center;
     align-items: center;
     gap: 20px;
+
+    max-width: 100%;
 }
 
 #header-brand h1 {
     color: white;
     font-size: 80px;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    #header-brand h1 {
+        font-size: 60px;
+    }
 }
 
 #header-logo {
@@ -82,9 +98,17 @@ header {
 
 #header-content {
     /* color: var(--main-bg-color); */
+    display: flex;
+    flex-direction: column;
+
     color: white;
     padding: 70px;
     text-shadow: #336363 0 2px 6px;
+
+    max-width: 100%;
+    padding: 15px;
+
+    gap: 30px;
 }
 
 main {
@@ -128,6 +152,7 @@ nav {
     width: 100%;
     position: fixed;
     top: 0;   
+    z-index: 10000;
 }
 
 #nav-title {
@@ -159,4 +184,90 @@ nav {
     width: 100%;
     padding: 0;
     margin: 0;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/* Responsive layout - makes a one column layout instead of a two-column layout
+@media (max-width: 600px) {
+    .grid {
+        flex-direction: column;
+    }
+} */
+
+.grid-card {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    
+    box-shadow: 0 2px 3px var(--ter-text-color);
+    background-color: var(--sec-bg-color);
+}
+
+.card-image {
+    width: 128px;
+    min-width: 128px;
+    
+}
+.card-image img{
+    border-radius: 12px;
+}
+
+.card-description {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    min-width: 100px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.h-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+    margin: 8px;
+}
+
+.h-list li {
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 0;
+
+    font-weight: bold;
+}
+
+.card-description-text {
+    display: flex;
+    text-align: start;
+    width: auto;
+}
+
+.card-subtitle {
+    color: var(--sec-accent-color);
 }
