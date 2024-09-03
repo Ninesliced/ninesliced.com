@@ -50,6 +50,12 @@ h3 {
     margin-top: 0.6em;
 }
 
+hr {
+    background-color: var(--main-text-color);
+    border-color: var(--main-text-color);
+    color: var(--main-text-color);
+}
+
 header {
     /* width: 100%; */
     display: flex;
