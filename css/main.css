@@ -72,9 +72,9 @@ header {
     background-image: url("../images/header_bg_2.png");
     background-size: cover;
     background-position: center 0px;
-    background-attachment: fixed
-    /* background-color: var(--ter-text-color); */
-    /* background-blend-mode: multiply; */
+    background-attachment: fixed;
+    background-color: var(--sec-bg-color);
+    background-blend-mode: luminosity;
     /* z-index: -900; */
 }
 
