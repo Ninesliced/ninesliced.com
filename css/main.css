@@ -73,8 +73,8 @@ header {
     background-size: cover;
     background-position: center 0px;
     background-attachment: fixed;
-    background-color: var(--sec-bg-color);
-    background-blend-mode: luminosity;
+    /* background-color: var(--sec-bg-color); */
+    /* background-blend-mode: luminosity; */
     /* z-index: -900; */
 }
 
