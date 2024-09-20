@@ -42,8 +42,8 @@ h1, h2, h3 {
     scroll-margin-top: 120px;
 }
 
-h2, h3 {
-    color: var(--main-accent-color);
+h1, h2, h3 {
+    color: var(--main-text-color);
 }
 
 h3 {
@@ -122,6 +122,10 @@ header {
     padding: 15px;
 
     gap: 30px;
+}
+
+#header-subtext {
+    color: white;
 }
 
 main {
@@ -324,4 +328,13 @@ nav {
     /* background-position: center top; */
 
     /* animation: constantMovement 2s linear infinite; */
+}
+
+.text-big {
+    font-size: larger;
+}
+
+.underline-link a {
+    text-decoration: underline var(--main-accent-color);
+    text-decoration-thickness: 2px;
 }
